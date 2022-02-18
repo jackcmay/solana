@@ -4,7 +4,7 @@ use {
     solana_program_test::*,
     solana_sdk::{
         ed25519_instruction::new_ed25519_instruction,
-        feature_set,
+        ed25519_program, feature_set, native_loader,
         signature::Signer,
         transaction::{Transaction, TransactionError},
         transport::TransportError,
@@ -66,6 +66,11 @@ async fn test_failure() {
 async fn test_success_call_builtin_program() {
     let mut program_test = ProgramTest::default();
     program_test.deactivate_feature(feature_set::prevent_calling_precompiles_as_programs::id());
+    program_test.deactivate_feature(feature_set::fix_ed25519_program_owner::id());
+    program_test.add_account(
+        ed25519_program::id(),
+        native_loader::create_loadable_account_for_test("ed25519_program").into(),
+    );
     let mut context = program_test.start_with_context().await;
 
     let client = &mut context.banks_client;
