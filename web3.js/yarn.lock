@@ -7937,6 +7937,11 @@ superstruct@^0.14.2:
   resolved "https://registry.npmjs.org/superstruct/-/superstruct-0.14.2.tgz"
   integrity sha512-nPewA6m9mR3d6k7WkZ8N8zpTWfenFH3q9pA2PkuiZxINr9DKB2+40wEQf0ixn8VaGuJ78AB6iWOtStI+/4FKZQ==
 
+superstruct@^0.16.1:
+  version "0.16.1"
+  resolved "https://registry.yarnpkg.com/superstruct/-/superstruct-0.16.1.tgz#d6d94ae4f9cd4d4845fa122daa070831a435ba28"
+  integrity sha512-TMaihyrSnOQ7m4wI9+zeGERm+BNvvtqWscFHVKUMgDwEb+62bwFzJFfW6US1K6V5G5+42v5gmqRibRX4tYDH9w==
+
 supports-color@8.1.1:
   version "8.1.1"
   resolved "https://registry.npmjs.org/supports-color/-/supports-color-8.1.1.tgz"
